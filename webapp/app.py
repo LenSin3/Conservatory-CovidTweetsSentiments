@@ -9,10 +9,10 @@ from sklearn.svm import LinearSVC
 # import and load saved transformer and model
 
 
-with open(f'model/text3_lsvc.pkl', 'rb') as f:
+with open(f'corona_tweets/new_text3_lsvc.pkl', 'rb') as f:
     text_transformer = pickle.load(f)
 
-with open(f'model/grid3_lsvc.pkl', 'rb') as f:
+with open(f'corona_tweets/new_grid3_lsvc.pkl', 'rb') as f:
     lsvc_model = pickle.load(f)
 
 
