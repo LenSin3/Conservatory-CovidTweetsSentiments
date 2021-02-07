@@ -7,11 +7,15 @@ from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.svm import LinearSVC
 
 # import and load saved transformer and model
-transformer_path = f'model/text3_lsvc.pkl'
-model_path = f'model/grid3_lsvc.pkl'
 
-text_transformer = pickle.load(open(transformer_path, 'rb'))
-lsvc_model = pickle.load(open(model_path, 'rb'))
+
+with open(f'model/text3_lsvc.pkl', 'rb') as f:
+    text_transformer = pickle.load(f)
+
+with open(f'model/grid3_lsvc.pkl', 'rb') as f:
+    lsvc_model = pickle.load(f)
+
+
 
 
 
