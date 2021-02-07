@@ -8,11 +8,12 @@ from sklearn.svm import LinearSVC
 
 # import and load saved transformer and model
 
-
-with open(f'corona_tweets/new_text3_lsvc.pkl', 'rb') as f:
+trans_path = "Conservatory-Product-Review-Classififcation/corona_tweets/new_text3_tfidf.pkl"
+model_path = "Conservatory-Product-Review-Classififcation/corona_tweets/new_grid3_lsvc.pkl"
+with open(trans_path, "rb") as f:
     text_transformer = pickle.load(f)
 
-with open(f'corona_tweets/new_grid3_lsvc.pkl', 'rb') as f:
+with open(model_path, "rb") as f:
     lsvc_model = pickle.load(f)
 
 
