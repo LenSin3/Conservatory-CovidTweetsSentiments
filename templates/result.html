@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			ML App
+		</div>
+		<h2>Spam Detector For SMS Messages</h2>
+		
+	</div>
+	</header>
+	<p style="color:blue;font-size:20;text-align: center;"><b>Results for Comment</b></p>
+	<div class="results">
+
+
+		
+		{% if output_prediction == "Neutral" %}
+        <h2 >I guess you feel neutral about it!</h2>
+        {% elif output_prediction == "Positive" %}
+        <h2>That's Postive!</h2>
+        {% elif output_prediction == "Negative" %}
+        <h2>That's Negative!</h2>
+        {% endif %}
+
+	</div>
+
+</body>
+</html>
