@@ -44,8 +44,9 @@ def index():
         prediction = lsvc_model.predict(data_transform)
         # output_prediction = lsvc_model.predict(data_transform)
         
-        return render_template('result.html', output_prediction = prediction)
-        # return jsonify(output_prediction)
+        # return render_template('result.html', output_prediction = prediction)
+        return render_template('index.html', output_prediction = prediction)
+      
 	
 
 if __name__ == "__main__":

@@ -81,6 +81,20 @@ body{
     background-color: white; 
   
   }
+
+  .boxresp {
+    margin-top: 60px; 
+    margin-bottom: 62px; 
+    padding: 10px 20px 15px; 
+    color:rgb(36, 14, 236);
+    background-color: rgb(226, 17, 17); 
+  
+  }
+
+
+
+
+
   /* Table */
   .table{
     font-size: 15px; 
