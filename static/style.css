@@ -1,6 +1,10 @@
 /* Body */
 body{
     background-color: rgba(245, 241, 237, 0.993); 
+    background-image: url(appbackgimg.jpg);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: center;
   }
   /* Navbar */
   .navbar{
@@ -62,7 +66,7 @@ body{
   }
   /* Paragraph Element */
   p{
-  color: #6D8092;
+  color: black;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 17px; 
   }
@@ -78,7 +82,7 @@ body{
     margin-bottom: 62px; 
     padding: 10px 20px 15px; 
     color:black;
-    background-color: white; 
+    background-color: #0BADA6; 
   
   }
 
@@ -145,11 +149,22 @@ body{
     }
   }
 
-  .result {
+  #result {
 
+    margin-top: 20px;
+
+    width: auto;
+    height: auto;
+    padding: 10px 10px;
+    text-align: center;
+    
+
+    border: 1px solid rgb(241, 10, 99);
+    background-color: #eeebe7;
+  }
+
+ h2 {
     margin: auto;
-
-    width: 35%;
-
-    border: 1px solid #ccc;
+    
+   
   }
