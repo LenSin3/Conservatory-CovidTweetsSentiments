@@ -42,8 +42,10 @@ def index():
         data_vector = text_vector.transform([message])
         data_transform = text_transformer.transform(data_vector)
         prediction = lsvc_model.predict(data_transform)
+        # output_prediction = lsvc_model.predict(data_transform)
         
         return render_template('result.html', output_prediction = prediction)
+        # return jsonify(output_prediction)
 	
 
 if __name__ == "__main__":
