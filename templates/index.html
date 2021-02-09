@@ -9,12 +9,26 @@
     <!--<link rel="stylesheet" href="style.css">-->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
-<script type="text/javascript">
-  function clearText(elementID)
-{
-    document.getElementById('outpred').innerHTML = "";
+<script>
+function clearText(ElementID) {
+  document.getElementById("result").innerHTML = "";
+}
+
+function fun(){ 
+            document.getElementById('tweet').value=''; 
+            } 
+function empty() {
+
+    var x;
+    x = document.getElementById("exampleFormControlTextarea1").value;
+    if (x == "") {
+        alert("Please enter a Tweet!");
+        return false;
+    };
 }
 </script>
+    
+
     
 </head>
 
@@ -44,13 +58,16 @@
         <!--Summary Box-->
 
         <div class="box">
-          <form action="{{ url_for('index')}}" method="POST">
+          <form id="myForm" action="{{ url_for('index')}}" method="POST">
             <p>Please Enter a Tweet Here</p>
             <div class="form-group"></div>
             <!--<textarea name="text" rows="5"></textarea>-->
             <textarea name="text" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
           <br/>
-          <input type="submit" class="btn-info" value="Predict">
+          <div>
+            <input id="tweet" type="submit" class="btn-info" value="Predict" onclick="return empty()">
+          </div>
+          
           </div>
         </form>
       </div> 
@@ -70,17 +87,21 @@
 
 
           {% if output_prediction == "Neutral" %}
-          <h2 id="outpred">I guess you feel neutral about it!</h2>
+          <h2>I guess you feel neutral about it!</h2>
           {% elif output_prediction == "Positive" %}
-          <h2 id="outpred">That's Postive!</h2>
+          <h2>That's Postive!</h2>
           {% elif output_prediction == "Negative" %}
-          <h2 id="outpred">That's Negative!</h2>
+          <h2>That's Negative!</h2>
           {% endif %}
   
 
         </div>
         <br>
-        <input class="btn-info" type="reset" value="Reset"  onclick="clearText('cart_items')">
+        <div>
+          <!--<input class="btn-info" type="reset" onclick="myFunction()"/>-->
+          <input type="reset" class="btn-info" value="Reset" onclick=clearText()>
+        </div>
+       
         
       
     
@@ -92,6 +113,11 @@
     <footer>
       <div class="footer">&copy; Copyright Coding Bootcamp 2020</div>
     </footer>
+    <script>
+      if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+      }
+      </script>
 
 </body>
 

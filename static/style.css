@@ -66,9 +66,9 @@ body{
   }
   /* Paragraph Element */
   p{
-  color: black;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 17px; 
+  color: white;
+  font-family: Arial, Helvetica, sans-serif, solid;
+  font-size: 25px; 
   }
   /* Unordered list */
   .unorderedlist {
@@ -86,15 +86,7 @@ body{
   
   }
 
-  .boxresp {
-    margin-top: 60px; 
-    margin-bottom: 62px; 
-    padding: 10px 20px 15px; 
-    color:rgb(36, 14, 236);
-    background-color: rgb(226, 17, 17); 
   
-  }
-
 
 
 
