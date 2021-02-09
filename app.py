@@ -1,10 +1,18 @@
 # Flask App
 # Import dependencies
 from flask import Flask, render_template, jsonify, redirect, url_for, request
+from flask_sqlalchemy import SQLAlchemy
+import os
 import pickle
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.svm import LinearSVC
+
+from config import DATABASE_URI
+import sqlalchemy
+from sqlalchemy.ext.automap import automap_base
+from sqlalchemy.orm import Session
+from sqlalchemy import create_engine
 
 # import and load saved transformer and model
 
@@ -27,10 +35,24 @@ with open(model_path, "rb") as f:
 
 app = Flask(__name__)
 
-# create route that renders index.html template
+# Database setup
+
+app.config(DATABASE_URI)
+db = SQLAlchemy(app)
+
+# reflect an existing database into a new model
+Base = automap_base()
+# reflect the tables
+Base.prepare(db.engine, reflect=True)
+
+# Save references to each table
+tweetsRatings = Base.classes.tweets_sentiment
+
+
+# create route that renders index.html template with prediction app
 @app.route("/", methods=['GET', 'POST'])
 def index():
-    """Returns the homepage"""
+    """Returns the homepage with Prediction App"""
     if request.method == 'GET':
 
 
@@ -46,7 +68,13 @@ def index():
         
         # return render_template('result.html', output_prediction = prediction)
         return render_template('index.html', output_prediction = prediction)
-      
+
+# create route to return unique dates
+@app.route("/unique_dates")
+def unique_dates():
+    """Returns a list of unique dates"""
+    udates = db.session.query(tweetsRatings.tweeet_date).distinct().all()
+    return jsonify(udates)
 	
 
 if __name__ == "__main__":
