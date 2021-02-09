@@ -56,13 +56,19 @@ body{
     width:50% !important;
     height:50% !important;
   }
+
+  #apptitle{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder; 
+  }
   
   /* Title Class  */
   .title{
     color: #0BADA6;  
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bolder; 
-    padding-top: 25px; 
+    padding-top: 25px;
+    text-align: center; 
   }
   /* Paragraph Element */
   p{
@@ -78,11 +84,12 @@ body{
   }
   /* Box Class */
   .box {
-    margin-top: 60px; 
-    margin-bottom: 62px; 
+    margin-top: 20px; 
+    margin-bottom: 30px; 
     padding: 10px 20px 15px; 
     color:black;
     background-color: #0BADA6; 
+    border-radius: 20px;
   
   }
 
@@ -156,7 +163,10 @@ body{
   }
 
  h2 {
-    margin: auto;
-    
-   
+    margin: auto; 
   }
+
+h1{
+  text-align: center;
+  color:white;
+}
