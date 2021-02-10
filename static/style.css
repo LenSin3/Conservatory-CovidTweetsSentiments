@@ -16,7 +16,7 @@ body{
     margin-left: 30px; 
     padding: inherit; 
     font-weight: bold; 
-    background-color: #0BADA6;
+    background-color: #4C6FBF;
     font-family: Georgia, 'Times New Roman', Times, serif;
   }
   .navbar{
@@ -49,7 +49,7 @@ body{
     height:100% !important;
   }
   .active, .panel:hover{
-    border-color:#0BADA6;
+    border-color:#4C6FBF;
     border-style: solid; 
     
   }
@@ -65,7 +65,7 @@ body{
   
   /* Title Class  */
   .title{
-    color: #0BADA6;  
+    color: #4C6FBF;  
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bolder; 
     padding-top: 25px;
@@ -89,7 +89,7 @@ body{
     margin-bottom: 30px; 
     padding: 10px 20px 15px; 
     color:black;
-    background-color: #0BADA6; 
+    background-color: #4C6FBF; 
     border-radius: 20px;
   
   }
@@ -99,7 +99,7 @@ body{
     margin-bottom: 30px; 
     padding: 10px 20px 10px; 
     color:black;
-    background-color: #0BADA6; 
+    background-color: #4C6FBF; 
     border-radius: 20px;
   
   }
@@ -109,7 +109,7 @@ body{
     margin-bottom: 100px; 
     padding: 10px 20px 15px; 
     color:black;
-    background-color: #0BADA6; 
+    background-color: #4C6FBF; 
     border-radius: 20px;
   
   }
@@ -129,7 +129,7 @@ body{
   background-color: #666666; 
   border-top-style: solid; 
   border-top-width: 5px; 
-  border-top-color: #0BADA6;
+  border-top-color: #4C6FBF;
   color: white; 
   min-height: 55px; 
   font-family: Arial, Helvetica, sans-serif;
@@ -144,7 +144,7 @@ body{
   /* Media Queries */
   @media(max-width: 992px){
   .navbar-expand-lg{
-  background-color: #0BADA6 !important;
+  background-color: #4C6FBF !important;
   }
   .navbar{
     max-height: none; 

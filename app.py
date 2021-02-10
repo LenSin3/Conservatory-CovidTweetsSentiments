@@ -65,8 +65,8 @@ def index():
         return render_template('index.html', output_prediction = prediction)
 
 # create route to return unique dates
-@app.route("/unique_dates")
-def unique_dates():
+@app.route("/uniqueDates")
+def uniqueDates():
     
 
     """Returns a list of unique dates"""
@@ -80,7 +80,7 @@ def unique_dates():
     return jsonify(list(df_dates_unq))
 
 # create route to return sentiments
-@app.route("/getlabels/<label>")
+@app.route("/uniqueDates/<label>")
 def getLabels(label):
 
     """Returns sentiment counts by date"""
@@ -102,16 +102,17 @@ def getLabels(label):
         label_count.append(dfLabels)
         
     return jsonify(label_count)
+
 # create route to filter by label and month
-@app.route('/getmonthlabels/<monthlab>')
-def getLabelsbyMonth(monthlab):
+@app.route('/uniqueDates/<monthlab>')
+def getmonthlabels(monthlab):
 
     """Returns Count of Labels in that month"""
     df_sent = pd.read_sql_query("""SELECT tweeet_date, tweet, sentiment FROM tweets_sentiment;""", conn)
     
     df_sent['dates'] = pd.to_datetime(df_sent['tweeet_date'], errors='coerce')
     df_sent['month'] = df_sent['dates'].dt.strftime('%b')
-    dfMain = df_sent.loc[df_sent['month'] == str(monthlab.title())]
+    dfMain = df_sent.loc[df_sent['month'] == monthlab.title()]
     dfLabel = dfMain.groupby('sentiment')['tweet'].count().reset_index()
 
     label_count = []
