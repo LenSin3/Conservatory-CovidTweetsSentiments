@@ -18,8 +18,8 @@ Our evaluation of the machine learning model started with the train-test split, 
  
  We selected our second model LinearSVC as it yielded the highest accuracy.  We then saved CountVectorizer and TFID Transformer objects into a pickle file.  Also, saved a LinearSVC model with best parameters from the GridSearchCV.
  
- <picture> 
- 
+ ![Snip20210210_3](https://user-images.githubusercontent.com/66816965/107607079-0463c280-6bed-11eb-882b-7b0b63b9c4a3.png)
+  
 We used Flask to render the result of submitted tweets. This will enable us to make real time predictions.
 
 <picture>
