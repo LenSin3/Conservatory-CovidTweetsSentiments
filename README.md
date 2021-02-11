@@ -20,6 +20,6 @@ Our evaluation of the machine learning model started with the train-test split, 
  
  ![Snip20210210_3](https://user-images.githubusercontent.com/66816965/107607079-0463c280-6bed-11eb-882b-7b0b63b9c4a3.png)
   
-We used Flask to render the result of submitted tweets. This will enable us to make real time predictions. We also extracted more data to test our model. Due to the large size of datasets, we decided to use about 0.5% of the new data which still had about 360000 rows. Thisdata together with train and test data were loaded in a postgresql database.
+We used Flask to render the result of submitted tweets. This will enable us to make real time predictions. We also extracted more data to test our model. Due to the large size of datasets, we decided to use about 0.5% of the new data which still had about 360000 rows. This data together with train and test data were loaded in a postgresql database.
 
-<picture>
+![Snip20210210_4](https://user-images.githubusercontent.com/66816965/107607153-47be3100-6bed-11eb-89db-8ae8c9facfab.png)
