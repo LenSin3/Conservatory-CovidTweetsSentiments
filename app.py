@@ -1,10 +1,15 @@
 # Flask App
 # Import dependencies
 from flask import Flask, render_template, jsonify, redirect, url_for, request
+from flask_sqlalchemy import SQLAlchemy
+import os
 import pickle
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.svm import LinearSVC
+
+
+
 
 # import and load saved transformer and model
 
@@ -23,14 +28,14 @@ with open(model_path, "rb") as f:
 
 
 
-
-
 app = Flask(__name__)
 
-# create route that renders index.html template
+
+
+# create route that renders index.html template with prediction app
 @app.route("/", methods=['GET', 'POST'])
 def index():
-    """Returns the homepage"""
+    """Returns the homepage with Prediction App"""
     if request.method == 'GET':
 
 
@@ -46,8 +51,7 @@ def index():
         
         # return render_template('result.html', output_prediction = prediction)
         return render_template('index.html', output_prediction = prediction)
-      
-	
+
 
 if __name__ == "__main__":
 
