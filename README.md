@@ -23,3 +23,6 @@ Our evaluation of the machine learning model started with the train-test split, 
 We used Flask to render the result of submitted tweets. This will enable us to make real time predictions. We also extracted more data to test our model. Due to the large size of datasets, we decided to use about 0.5% of the new data which still had about 360000 rows. This data together with train and test data were loaded in a postgresql database.
 
 ![Snip20210210_4](https://user-images.githubusercontent.com/66816965/107607153-47be3100-6bed-11eb-89db-8ae8c9facfab.png)
+
+Once our models were finalized, we were then able to implement them into our javascript and html files to generate our Sentiment Analysis on COVID-19 Tweets like: 
+![Snip20210210_6](https://user-images.githubusercontent.com/66816965/107607352-d9c63980-6bed-11eb-8296-6258d1d71e4b.png)
