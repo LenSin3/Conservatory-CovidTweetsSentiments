@@ -13,7 +13,8 @@ Our evaluation of the machine learning model started with the train-test split, 
 - Linear SVC 
 - Naive Bayes 
 - Random Forest Classifier
- <picture>
+
+![Snip20210210_2](https://user-images.githubusercontent.com/66816965/107607030-d2eaf700-6bec-11eb-9a92-43b9b7690ae4.png)
  
  We selected our second model LinearSVC as it yielded the highest accuracy.  We then saved CountVectorizer and TFID Transformer objects into a pickle file.  Also, saved a LinearSVC model with best parameters from the GridSearchCV.
  
